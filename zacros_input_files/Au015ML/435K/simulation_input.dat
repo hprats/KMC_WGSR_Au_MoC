@@ -1,0 +1,49 @@
+# Input File                                                               #
+#                                                                          #
+# University of Barcelona                                                  #
+#                                                                          #
+# Hector Prats, PhD                                                        #
+############################################################################
+
+random_seed               123278
+
+temperature               4.35e+002
+pressure                  0.040 # 26 torr
+
+n_gas_species             4
+gas_specs_names           H2O      H2      CO2      CO
+gas_energies              0.00     0.00   -0.93     0.00  # eV
+gas_molar_fracs           0.334    0.000   0.000    0.666
+gas_molec_weights         18.0153  2.0159  44.0096  28.0102
+
+n_surf_species            31
+surf_specs_names          H2O* H2O_in* H2O_Au* OH** OH_in* OH_Au* O_Mo* O_C*  O_Mo_in* O_C_in* O_Au* H* H_in* CO_Mo* CO_C* CO_Mo_in* CO_C_in* CO_Au* COOH** COOH_in** COOH_h** CO2** CO2_in** CO2_h** CO2_Au* HCO**  HCOO*** H2* H2_in* H2_Au* C*
+surf_specs_dent           1    1       1       2    1      1      1     1     1        1       1     1  1     1      1     1         1        1      2      2         2        2     2        2       1       2      3       1   1      1      1
+
+#snapshots                 on time 5.e-1
+ snapshots                 on event 1000000 # 1e6
+#process_statistics        on time 1.e-2
+ process_statistics        on event 1000000 # 1e6
+#species_numbers           on time 5.e-4
+ species_numbers           on event 1000000 # 1e6
+
+event_report              off
+
+# max_steps                 infinity
+max_steps                 300000000 # 1e9
+# max_time                  25.0
+max_time                  2000.0
+
+wall_time                 500000000 # 24 hours
+
+no_restart
+
+# debug_check_processes
+# debug_report_processes
+
+# debug_check_global_energetics
+# debug_report_global_energetics
+
+# debug_check_lattice
+
+finish

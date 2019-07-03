@@ -1,0 +1,485 @@
+
+mechanism 
+
+#######################################################
+
+reversible_step 1
+
+  gas_reacs_prods H2O -1
+  sites 1
+  initial # (entity_number, species, dentate)
+    1 *     1
+  final
+    1 H2O*  1
+  site_types topMo
+  pre_expon  1.38E+08
+  pe_ratio   1.46E-01
+  activ_eng  0.00
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 2a
+
+  gas_reacs_prods CO -1
+  sites 1
+  initial # (entity_number, species, dentate)
+    1 *     1
+  final
+    1 CO_C*   1
+  site_types topC
+  pre_expon  1.10E+08
+  pe_ratio   8.34E-07
+  activ_eng  0.00
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 2b
+
+  gas_reacs_prods CO -1
+  sites 1
+  initial # (entity_number, species, dentate)
+    1 *     1
+  final
+    1 CO_Mo*   1
+  site_types topMo
+  pre_expon  1.10E+08
+  pe_ratio   1.23E-06
+  activ_eng  0.00
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+step 3a_rev
+
+  gas_reacs_prods H2 1
+  sites 1
+  initial # (entity_number, species, dentate)
+    1 H2*    1
+  final
+    1 *     1
+  site_types topMo
+  pre_expon  6.11E+09
+  activ_eng  0.46
+  prox_factor 0.50
+
+end_step
+
+#######################################################
+
+step 3b_rev
+
+  gas_reacs_prods H2 1
+  sites 1
+  initial # (entity_number, species, dentate)
+    1 H2*    1
+  final
+    1 *     1
+  site_types topC
+  pre_expon  6.11E+09
+  activ_eng  0.45
+  prox_factor 0.50
+
+end_step
+
+#######################################################
+
+step 4_rev
+
+  gas_reacs_prods CO2 1
+  sites 2
+  neighboring 1-2
+  initial # (entity_number, species, dentate)
+    1 CO2** 1
+    1 CO2** 2
+  final
+    1 *     1
+    2 *     1
+  site_types topC topMo
+  pre_expon  8.85E+13
+  activ_eng  0.82
+  prox_factor 0.50
+
+end_step
+
+#######################################################
+
+reversible_step 5
+
+  sites 3
+  neighboring 1-2 1-3 2-3
+  initial # (entity_number, species, dentate)
+    1 H2O*  1
+    2 *     1
+    3 *     1
+  final
+    1 OH**  1
+    1 OH**  2
+    2 H*    1
+  site_types topMo topC Hres
+  pre_expon  9.50E+11
+  pe_ratio   4.09E-02
+  activ_eng  0.53
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 6a
+
+  sites 3
+  neighboring 1-2 1-3 2-3
+  initial # (entity_number, species, dentate)
+    1 OH**  1
+    1 OH**  2
+    2 *     1
+  final
+    1 O_Mo* 1
+    2 *     1
+    3 H*    1
+  site_types topMo topC Hres
+  pre_expon  1.25E+13
+  pe_ratio   6.12E-01
+  activ_eng  1.56 
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 6b
+
+  sites 3
+  neighboring 1-2 1-3 2-3
+  initial # (entity_number, species, dentate)
+    1 OH**  1
+    1 OH**  2
+    2 *     1
+  final
+    1 *     1
+    2 O_C*  1
+    3 H*    1
+  site_types topMo topC Hres
+  pre_expon  1.25E+13
+  pe_ratio   6.12E-01
+  activ_eng  1.56 
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 7
+
+  sites 4
+  neighboring 1-2 2-3 3-4
+  initial # (entity_number, species, dentate)
+    1 OH**  1
+    1 OH**  2
+    2 OH**  1
+    2 OH**  2
+  final
+    1 *     1
+    2 O_C*  1
+    3 H2O*  1
+    4 *     1
+  site_types topMo topC topMo topC
+  pre_expon  2.52E+14
+  pe_ratio   3.27E+01
+  activ_eng  2.22 
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 8
+
+  sites 2
+  neighboring 1-2
+  initial # (entity_number, species, dentate)
+    1 CO_C* 1
+    2 *     1
+  final
+    1 C*    1
+    2 O_Mo* 1
+  site_types topC topMo
+  pre_expon  3.02E+11
+  pe_ratio   6.33E-02
+  activ_eng  1.79
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 9
+
+  sites 2
+  neighboring 1-2
+  initial # (entity_number, species, dentate)
+    1 CO_C*  1
+    2 O_Mo*   1
+  final
+    1 CO2**  1
+    1 CO2**  2
+  site_types topC topMo
+  pre_expon  8.82E+12
+  pe_ratio   8.82E-02
+  activ_eng  1.52 
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 10
+
+  sites 3
+  neighboring 1-2 2-3
+  initial # (entity_number, species, dentate)
+    1 CO_C*  1
+    2 OH**   1
+    2 OH**   2
+  final
+    1 COOH** 1
+    1 COOH** 2
+    2 *      1
+  site_types topC topMo topC
+  pre_expon  1.49E+09 # alpha = 0.001
+  pe_ratio   1.94E-01
+  activ_eng  0.51
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 11
+
+  sites 3
+  neighboring 1-2 1-3 2-3
+  initial # (entity_number, species, dentate)
+    1 COOH** 1
+    1 COOH** 2
+    2 *      1
+  final
+    1 CO2**  1
+    1 CO2**  2
+    2 H*     1
+  site_types topC topMo Hres
+  pre_expon  6.34E+11
+  pe_ratio   1.08E-01
+  activ_eng  0.27
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 12
+
+  sites 4
+  neighboring 1-2 1-3 2-4 3-4
+  initial # (entity_number, species, dentate)
+    1 COOH**  1
+    1 COOH**  2
+    2 OH**    1
+    2 OH**    2
+  final
+    1 CO2**  1
+    1 CO2**  2
+    2 H2O*   1
+    3 *      1
+  site_types topC topMo topMo topC
+  pre_expon  2.96E+12
+  pe_ratio   4.25E-01
+  activ_eng  0.37
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 13
+
+  sites 3
+  neighboring 1-2 1-3 2-3
+  initial # (entity_number, species, dentate)
+    1 CO_C* 1
+    2 *     1
+    3 H*    1
+  final
+    1 HCO** 1
+    1 HCO** 2
+    2 *     1
+  site_types topC topMo Hres
+  pre_expon  2.98E+12
+  pe_ratio   1.22E-01
+  activ_eng  0.79
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 14
+
+  sites 3
+  neighboring 1-2 1-3
+  initial # (entity_number, species, dentate)
+    1 HCO** 1
+    1 HCO** 2
+    2 O_Mo* 1
+  final
+    1 HCOO*** 1
+    1 HCOO*** 2
+    1 HCOO*** 3
+  site_types topC topMo topMo
+  pre_expon  1.77E+12
+  pe_ratio   2.85E+00
+  activ_eng  2.02
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 15
+
+  sites 4
+  neighboring 1-2 1-3 1-4 2-4 3-4
+  initial # (entity_number, species, dentate)
+    1 HCOO*** 1
+    1 HCOO*** 2
+    1 HCOO*** 3
+    2 *       1
+  final
+    1 CO2**   1
+    1 CO2**   2
+    2 *       1
+    3 H*      1
+  site_types topC topMo topMo Hres
+  pre_expon  1.21E+12
+  pe_ratio   2.07E-01
+  activ_eng  1.94
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 16a
+
+  sites 3
+  neighboring 1-2 1-3 2-3
+  initial # (entity_number, species, dentate)
+    1 H*    1
+    2 H*    1
+    3 *     1
+  final
+    1 *     1
+    2 *     1
+    3 H2*   1
+  site_types Hres Hres topC
+  pre_expon  7.49E+12
+  pe_ratio   4.23E+01
+  activ_eng  0.75
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step 16b
+
+  sites 3
+  neighboring 1-2 1-3 2-3
+  initial # (entity_number, species, dentate)
+    1 H*    1
+    2 H*    1
+    3 *     1
+  final
+    1 *     1
+    2 *     1
+    3 H2*   1
+  site_types Hres Hres topMo
+  pre_expon  7.49E+12
+  pe_ratio   4.23E+01
+  activ_eng  0.75
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step H_dif_a
+
+  sites 2
+  neighboring 1-2
+  initial # (entity_number, species, dentate)
+    1 H*    1
+    2 *     1
+  final
+    1 *     1
+    2 H*    1
+  site_types Hres Hres
+  pre_expon  1.00E+7
+  pe_ratio   1.00E+0
+  activ_eng  0.25
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step O_dif_C_Mo
+
+  sites 2
+  neighboring 1-2
+  initial # (entity_number, species, dentate)
+    1 O_C*  1
+    2 *     1
+  final
+    1 *     1
+    2 O_Mo* 1
+  site_types topC topMo
+  pre_expon  1.00E+12
+  pe_ratio   1.00E+00
+  activ_eng  0.76
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+reversible_step CO_dif_Mo_C
+
+  sites 2
+  neighboring 1-2
+  initial # (entity_number, species, dentate)
+    1 CO_Mo*   1
+    2 *        1
+  final
+    1 *        1
+    2 CO_C*    1
+  site_types topMo topC
+  pre_expon  1.00E+11
+  pe_ratio   1.00E+0
+  activ_eng  0.12
+  prox_factor 0.50
+
+end_reversible_step
+
+#######################################################
+
+end_mechanism
+

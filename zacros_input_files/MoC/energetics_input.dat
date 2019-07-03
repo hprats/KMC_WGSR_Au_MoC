@@ -1,0 +1,603 @@
+energetics
+  
+############################################################################
+
+cluster CO_C_Point
+  
+  sites 1
+  lattice_state
+    1 CO_C*  1
+  site_types topC    
+  cluster_eng         -1.90
+  
+end_cluster
+
+############################################################################
+
+cluster CO_Mo_Point
+  
+  sites 1
+  lattice_state
+    1 CO_Mo*  1
+  site_types topMo    
+  cluster_eng         -1.07
+  
+end_cluster
+
+############################################################################
+
+cluster H2O_Point
+  
+  sites 1
+  lattice_state
+    1 H2O*  1
+  site_types topMo    
+  cluster_eng         -0.77
+  
+end_cluster
+
+############################################################################
+
+cluster CO2_Point
+  
+  sites 2
+  neighboring 1-2
+  lattice_state
+    1 CO2** 1
+    1 CO2** 2
+  site_types topC topMo    
+  cluster_eng         -1.74
+  
+end_cluster
+
+############################################################################
+
+cluster H2_C_Point
+  
+  sites 1
+  lattice_state
+    1 H2*  1
+  site_types topC    
+  cluster_eng         -0.45
+  
+end_cluster
+
+############################################################################
+
+cluster H2_Mo_Point
+  
+  sites 1
+  lattice_state
+    1 H2*  1
+  site_types topMo    
+  cluster_eng         -0.45
+  
+end_cluster
+
+############################################################################
+
+cluster OH_Point
+  
+  sites 2
+  neighboring 1-2
+  lattice_state
+    1 OH**  1
+    1 OH**  2
+  site_types topMo topC    
+  cluster_eng         -0.86
+  
+end_cluster
+
+############################################################################
+
+cluster H_Point
+  
+  sites 1
+  lattice_state
+    1 H*  1
+  site_types Hres   
+  cluster_eng         -0.30
+  
+end_cluster
+
+############################################################################
+
+cluster O_C_Point
+  
+  sites 1
+  lattice_state
+    1 O_C*  1
+  site_types topC    
+  cluster_eng         -0.51
+  
+end_cluster
+
+############################################################################
+
+cluster O_Mo_Point
+  
+  sites 1
+  lattice_state
+    1 O_Mo*  1
+  site_types topMo    
+  cluster_eng         0.05
+  
+end_cluster
+
+############################################################################
+
+cluster COOH_Point
+  
+  sites 2
+  neighboring 1-2
+  lattice_state
+    1 COOH**  1
+    1 COOH**  2
+  site_types topC topMo    
+  cluster_eng         -1.56
+  
+end_cluster
+
+############################################################################
+
+cluster HCO_Point
+  
+  sites 2
+  neighboring 1-2
+  lattice_state
+    1 HCO**  1
+    1 HCO**  2
+  site_types topC topMo    
+  cluster_eng         -2.09
+  
+end_cluster
+
+############################################################################
+
+cluster HCOO_Point
+  
+  sites 3
+  neighboring 1-2 1-3
+  lattice_state
+    1 HCOO***  1
+    1 HCOO***  2
+    1 HCOO***  3
+  site_types topC topMo topMo    
+  cluster_eng         -2.76
+  
+end_cluster
+
+############################################################################
+
+cluster C_Point
+  
+  sites 1
+  lattice_state
+    1 C*  1
+  site_types topC    
+  cluster_eng         -1.43
+  
+end_cluster
+
+############################################################################
+
+cluster OH+H
+
+  sites 3
+  neighboring 1-2 1-3 2-3
+  lattice_state
+    1 OH**  1
+    1 OH**  2
+    2 H*    1
+  site_types topMo topC Hres
+  cluster_eng         -0.04 
+
+end_cluster
+
+############################################################################
+
+cluster OH+O_C
+
+  sites 3
+  neighboring 1-2 1-3 
+  lattice_state
+    1 OH**  1
+    1 OH**  2
+    2 O_C*    1
+  site_types topMo topC topC
+  cluster_eng         0.02 
+
+end_cluster
+
+############################################################################
+
+cluster OH+O_Mo
+
+  sites 3
+  neighboring 1-2 2-3 
+  lattice_state
+    1 OH**  1
+    1 OH**  2
+    2 O_Mo*    1
+  site_types topMo topC topMo
+  cluster_eng         0.02 
+
+end_cluster
+
+############################################################################
+ 
+cluster O_C+O_Mo
+
+  sites 2
+  neighboring 1-2
+  lattice_state
+    1 O_C*  1
+    2 O_Mo*    1
+  site_types topC topMo
+  cluster_eng         0.03
+
+end_cluster
+
+############################################################################
+ 
+cluster O_C+H
+
+  sites 2
+  neighboring 1-2
+  lattice_state
+    1 O_C*  1
+    2 H*    1
+  site_types topC Hres
+  cluster_eng         0.00
+
+end_cluster
+
+############################################################################
+ 
+cluster O_Mo+H
+
+  sites 2
+  neighboring 1-2
+  lattice_state
+    1 O_Mo* 1
+    2 H*    1
+  site_types topMo Hres
+  cluster_eng         0.00
+
+end_cluster
+
+############################################################################
+
+cluster OH+OH
+
+  sites 4
+  neighboring 1-2 2-3 3-4
+  lattice_state
+    1 OH**  1
+    1 OH**  2
+    2 OH**  1
+    2 OH**  2
+  site_types topMo topC topMo topC 
+  cluster_eng         0.22 
+
+end_cluster
+
+############################################################################
+
+cluster OH+H2Oa
+
+  sites 4
+  neighboring 1-2 1-4 2-3 3-4
+  lattice_state
+    1 OH**  1
+    1 OH**  2
+    2 H2O*  1
+    3 *     1
+  site_types topMo topC topMo Hres
+  cluster_eng         0.04
+
+end_cluster
+
+############################################################################
+
+cluster OH+H2Ob
+
+  sites 4
+  neighboring 1-2 1-4 2-3 3-4
+  lattice_state
+    1 OH**  1
+    1 OH**  2
+    2 H2O*  1
+    3 H*    1
+  site_types topMo topC topMo Hres
+  cluster_eng         0.04
+
+end_cluster
+
+############################################################################
+ 
+cluster O_C+H2O
+
+  sites 2
+  neighboring 1-2
+  lattice_state
+    1 O_C*  1
+    2 H2O*  1
+  site_types topC topMo
+  cluster_eng         0.17
+
+end_cluster
+
+############################################################################
+ 
+cluster CO_C+O_Mo
+
+  sites 2
+  neighboring 1-2
+  lattice_state
+    1 CO_C*    1
+    2 O_Mo*     1
+  site_types topC topMo
+  cluster_eng         0.34
+
+end_cluster
+
+############################################################################
+
+cluster CO_C+OH
+
+  sites 3
+  neighboring 1-2 2-3
+  lattice_state
+    1 CO_C*  1
+    2 OH**   1
+    2 OH**   2
+  site_types topC topMo topC
+  cluster_eng         0.28
+
+end_cluster
+
+############################################################################
+
+cluster HCO+OH
+
+  sites 4
+  neighboring 1-2 1-3 2-4 3-4
+  lattice_state
+    1 HCO**  1
+    1 HCO**  2
+    2 OH**   1
+    2 OH**   2
+  site_types topC topMo topMo topC
+  cluster_eng         0.28
+
+end_cluster
+
+############################################################################
+
+cluster CO2+H
+
+  sites 3
+  neighboring 1-2 1-3 2-3
+  lattice_state
+    1 CO2**  1
+    1 CO2**  2
+    2 H*     1
+  site_types topC topMo Hres
+  cluster_eng         0.01
+
+end_cluster
+
+############################################################################
+
+cluster CO2+H2O
+
+  sites 3
+  neighboring 1-2 1-3
+  lattice_state
+    1 CO2**  1
+    1 CO2**  2
+    2 H2O*   1
+  site_types topC topMo topMo
+  cluster_eng         0.10 
+
+end_cluster
+
+############################################################################
+
+cluster HCO+O_C
+
+  sites 3
+  neighboring 1-2 2-3
+  lattice_state
+    1 HCO** 1
+    1 HCO** 2
+    2 O_C*    1
+  site_types topC topMo topC
+  cluster_eng         0.06
+
+end_cluster
+
+############################################################################
+
+cluster HCO+O_Mo
+
+  sites 3
+  neighboring 1-2 1-3
+  lattice_state
+    1 HCO** 1
+    1 HCO** 2
+    2 O_Mo*    1
+  site_types topC topMo topMo
+  cluster_eng         0.06
+
+end_cluster
+
+############################################################################
+
+cluster CO_C+CO_Mo
+
+  sites 2
+  neighboring 1-2
+  lattice_state
+    1 CO_C*    1
+    2 CO_Mo*    1
+  site_types topC topMo
+  cluster_eng         0.73
+
+end_cluster
+
+############################################################################
+
+cluster HCO+CO_Mo
+
+  sites 3
+  neighboring 1-2 1-3
+  lattice_state
+    1 HCO**    1
+    1 HCO**    2
+    2 CO_Mo*   1
+  site_types topC topMo topMo
+  cluster_eng         0.73
+
+end_cluster
+
+############################################################################
+
+cluster CO_C+CO_C_a
+
+  sites 3
+  neighboring 1-2 2-3
+  lattice_state
+    1 CO_C*   1
+    2 *       1
+    3 CO_C*   1
+  site_types topC Hres topC
+  cluster_eng         0.62
+
+end_cluster
+
+############################################################################
+
+cluster CO_C+CO_C_b
+
+  sites 3
+  neighboring 1-2 2-3
+  lattice_state
+    1 CO_C*   1
+    2 H*      1
+    3 CO_C*   1
+  site_types topC Hres topC
+  cluster_eng         0.62
+
+end_cluster
+
+############################################################################
+
+cluster HCO+HCO_prop
+
+  sites 4
+  neighboring 1-2 2-3 3-4 1-4
+  lattice_state
+    1 HCO**   1
+    1 HCO**   2
+    2 HCO**   1
+    2 HCO**   2
+  site_types topC topMo topC topMo
+  cluster_eng         0.73
+
+end_cluster
+
+############################################################################
+
+cluster HCO+HCO_lluny
+
+  sites 4
+  neighboring 1-2 2-3 3-4
+  lattice_state
+    1 HCO**   1
+    1 HCO**   2
+    2 HCO**   1
+    2 HCO**   2
+  site_types topC topMo topC topMo
+  cluster_eng         0.62
+
+end_cluster
+
+############################################################################
+
+cluster HCO+CO_C
+
+  sites 3
+  neighboring 1-2 2-3
+  lattice_state
+    1 HCO**   1
+    1 HCO**   2
+    2 CO_C*   1
+  site_types topC topMo topC
+  cluster_eng         0.62
+
+end_cluster
+
+############################################################################
+
+cluster CO_C+H2O
+
+  sites 2
+  neighboring 1-2
+  lattice_state
+    1 H2O*   1
+    2 CO_C*    1
+  site_types topMo topC
+  cluster_eng         0.15 
+end_cluster
+
+############################################################################
+
+cluster HCO+H2O
+
+  sites 3
+  neighboring 1-2 1-3
+  lattice_state
+    1 HCO**   1
+    1 HCO**   2
+    2 H2O*    1
+  site_types topC topMo topMo
+  cluster_eng         0.15 
+end_cluster
+
+############################################################################
+
+cluster COOH+OH
+
+  sites 4
+  neighboring 1-2 1-3 2-4 3-4
+  lattice_state
+    1 COOH**  1
+    1 COOH**  2    
+    2 OH**    1
+    2 OH**    2
+  site_types topC topMo topMo topC
+  cluster_eng         0.11 
+
+end_cluster
+
+############################################################################
+
+cluster COOH+COOHa
+
+  sites 4
+  neighboring 1-2 1-4 2-3 3-4 
+  lattice_state
+    1 COOH**  1
+    1 COOH**  2    
+    2 COOH**  1
+    2 COOH**  2    
+  site_types topC topMo topC topMo
+  cluster_eng         0.59 
+
+end_cluster
+
+############################################################################
+
+end_energetics
